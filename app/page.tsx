@@ -92,11 +92,16 @@ export default function Home() {
       <div className="pb-10 mx-96">
         <ExperiencesGrid experiences={[
           {
-            title: "Développeur web",
-            company: "Société Générale",
-            date: "2021 - 2022",
-            description: "Développement d'une application web pour la gestion des incidents informatiques.",
-            technologies: ["C#", "ASP.NET Core", "Vue.js", "Vuetify", "Entity Framework", "SQL Server"]
+            name: "Schiller Médical",
+            type: "Alternance",
+            startDate: "04/09/2023",
+            endDate: "30/08/2024",
+            duration: "1 an",
+            description: "Développement en PHP Laravel d’un site web interne destiné à la production des appareils de l’entreprise.",
+            details: [],
+            image: "/logo/schiller.png",
+            imageWidth: 340,
+            imageHeight: 340
           }
         ]} />
       </div>
