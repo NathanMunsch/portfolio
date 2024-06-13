@@ -1,10 +1,20 @@
 import Image from 'next/image';
 
-export default function ProjectsGrid({ projects }) {
+interface Project {
+    image: string;
+    imageWidth: number;
+    imageHeight: number;
+    name: string;
+    description: string;
+    link: string;
+    technologies: string[];
+}
+
+export default function ProjectsGrid({ projects }: { projects: Project[] }) {
     return (
         <div className="grid grid-cols-3 gap-4">
             {projects.map((project, index) => (
-                <div className="bg-white rounded-lg shadow-xl">
+                <div key={index} className="bg-white rounded-lg shadow-xl">
                     <div className="h-40 flex items-center justify-center">
                         <Image src={project.image} width={project.imageWidth} height={project.imageHeight} alt={project.name} />
                     </div>
@@ -14,7 +24,7 @@ export default function ProjectsGrid({ projects }) {
                         <a href={project.link} target="_blank" className="block text-blue-600 hover:underline mt-4">Découvrir le projet 🚀</a>
                         <div className="flex flex-row flex-wrap justify-evenly gap-1 pt-7">
                             {project.technologies.map((technology, index) => (
-                                <p className="border border-gray-300 rounded-full px-2 py-1 text-sm">{technology}</p>
+                                <p key={index} className="border border-gray-300 rounded-full px-2 py-1 text-sm">{technology}</p>
                             ))}
                         </div>
                     </div>
