@@ -24,7 +24,7 @@ export default function ExperiencesGrid({ experiences }: { experiences: Experien
                     <div className="p-6 h-64">
                         <h3 className="text-2xl font-bold">{experience.name}</h3>
                         <p className="text-gray-600">📜 {experience.type}</p>
-                        <p className="text-gray-600">📅 {experience.startDate} au {experience.endDate}</p>
+                        <p className="text-gray-600">📅 {experience.startDate} - {experience.endDate}</p>
                         <p className="text-gray-600 mb-2">🕒 {experience.duration}</p>
                         <p className="text-gray-600">{experience.description}</p>
                         {experience.details?.length > 0 && (
