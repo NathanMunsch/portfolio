@@ -1,112 +1,140 @@
+import Technologie from "./components/Technologie";
+import SectionTitle from "./components/SectionTitle";
+import Header from "./components/Header";
+import DownloadButton from "./components/DownloadButton";
 import Image from "next/image";
+import ProjectsGrid from "./components/ProjectsGrid";
+import ExperiencesGrid from "./components/ExperiencesGrid";
+import EducationsGrid from "./components/EducationsGrid";
+import FancyButton from "./components/FancyButton";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main>
+      <DownloadButton />
+      <Header />
+
+      {/* < --- Title ---> */}
+      <div id="home" className="flex h-screen flex-col items-center justify-center gap-3">
+        <h1 className="text-center text-8xl font-bold">
+          Nathan Munsch
+          <span className="text-target text-2xl text-mainBlue">■</span>
+        </h1>
+        <p className="text-center text-4xl">
+          <span className="font-bold text-mainBlue">&lt;</span>
+          Développeur
+          <span className="font-bold text-mainBlue"> /&gt;</span>
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      {/* < --- About me ---> */}
+      <div id="about" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="À propos" />
+      </div>
+      <div className="flex flex-row justify-center pb-10 mx-96 gap-4 items-center">
+        <p className="text-xl">Passionné par le développement informatique avec une expérience enrichie par l'alternance et les stages, je maîtrise divers langages et outils de programmation. En dehors de mon travail et de mes études, durant mon temps libre, je suis passionné par la moto et les jeux vidéo.</p>
+        <Image className="rounded-lg" src="/logo/aboutme.png" width={150} height={150} alt="À propos de moi" />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* < --- Skills ---> */}
+      <div id="skills" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Compétences" />
+      </div>
+      <div className="flex flex-wrap justify-center gap-4 mx-96 pb-10">
+        <Technologie name="MySQL" src="/logo/mysql.svg" />
+        <Technologie name="MariaDB" src="/logo/mariadb.png" />
+        <Technologie name="SQL Server" src="/logo/sqlserver.svg" />
+        <Technologie name="MongoDB" src="/logo/mongodb.png" />
+        <Technologie name="SQL" src="/logo/sql.png" />
+        <Technologie name="C" src="/logo/c.png" />
+        <Technologie name="C++" src="/logo/cpp.png" />
+        <Technologie name="C#" src="/logo/csharp.png" />
+        <Technologie name="Visual Basic" src="/logo/vb.png" />
+        <Technologie name="Python" src="/logo/python.png" />
+        <Technologie name="Java" src="/logo/java.png" />
+        <Technologie name="PHP" src="/logo/php.png" />
+        <Technologie name="HTML" src="/logo/html5.png" />
+        <Technologie name="CSS" src="/logo/css3.png" />
+        <Technologie name="JavaScript" src="/logo/js.webp" />
+        <Technologie name="Laravel" src="/logo/laravel.png" />
+        <Technologie name="Asp.Net Core" src="/logo/dotnetcore.png" />
+        <Technologie name=".Net" src="/logo/dotnet.png" />
+        <Technologie name="Vue.js" src="/logo/vuejs.webp" />
+        <Technologie name="Tailwind CSS" src="/logo/tailwindcss.png" />
+        <Technologie name="Next.js" src="/logo/nextjs.png" />
+        <Technologie name="Docker" src="/logo/docker.png" />
+        <Technologie name="Git" src="/logo/git.png" />
+        <Technologie name="Linux" src="/logo/linux.png" />
+        <Technologie name="Réseaux" src="/logo/network.png" />
+      </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* < --- My projects ---> */}
+      <div id="projects" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Mes projets" />
+      </div>
+      <div className="pb-10 mx-96">
+        <ProjectsGrid projects={[
+          {
+            name: "TwitterLite",
+            description: "Création d'une version allégée du réseau social Twitter.",
+            link: "https://github.com/NathanMunsch/TwitterLite",
+            image: "/logo/twitterlite.png",
+            imageWidth: 280,
+            imageHeight: 280,
+            technologies: ["C#", "ASP.NET Core", "Vue.js", "Vuetify", "Entity Framework", "SQL Server"]
+          }
+        ]} />
+      </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* < --- My experiences ---> */}
+      <div id="experiences" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Mes expériences" />
+      </div>
+      <div className="pb-10 mx-96">
+        <ExperiencesGrid experiences={[
+          {
+            name: "Schiller Médical",
+            type: "Alternance",
+            startDate: "04/09/2023",
+            endDate: "30/08/2024",
+            duration: "1 an",
+            description: "Développement en PHP Laravel d’un site web interne destiné à la production des appareils de l’entreprise.",
+            details: [],
+            image: "/logo/schiller.png",
+            imageWidth: 340,
+            imageHeight: 340
+          }
+        ]} />
+      </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* < --- Education ---> */}
+      <div id="education" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Mes formations" />
+      </div>
+      <div className="pb-10 mx-96">
+        <EducationsGrid educations={[
+          {
+            name: "BTS SIO",
+            completeName: "Services Informatiques aux Organisations",
+            specialty: "Solutions logicielles et applications métiers",
+            school: "Lycée René Cassin",
+            location: "Strasbourg",
+            image: "/logo/lycee_rene_cassin.png",
+            imageWidth: 225,
+            imageHeight: 225,
+            date: "2021 - 2023"
+          }
+        ]} />
+      </div>
+
+      {/* < --- Contact ---> */}
+      <div id="contact" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Contact" />
+      </div>
+      <div className="flex flex-wrap justify-center pb-10 mx-96 gap-10">
+        <FancyButton name="GitHub" link="https://github.com/NathanMunsch" />
+        <FancyButton name="LinkedIn" link="https://www.linkedin.com/in/nathan-m-38204b220/" />
+        <FancyButton name="nathanmunschpro@gmail.com" link="mailto:nathanmunschpro@gmail.com" />
       </div>
     </main>
   );
