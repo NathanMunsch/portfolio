@@ -5,6 +5,8 @@ import DownloadButton from "./components/DownloadButton";
 import Image from "next/image";
 import ProjectsGrid from "./components/ProjectsGrid";
 import ExperiencesGrid from "./components/ExperiencesGrid";
+import EducationsGrid from "./components/EducationsGrid";
+import FancyButton from "./components/FancyButton";
 
 export default function Home() {
   return (
@@ -54,7 +56,6 @@ export default function Home() {
         <Technologie name="HTML" src="/logo/html5.png" />
         <Technologie name="CSS" src="/logo/css3.png" />
         <Technologie name="JavaScript" src="/logo/js.webp" />
-        <Technologie name="CodeIgniter" src="/logo/codeigniter.webp" />
         <Technologie name="Laravel" src="/logo/laravel.png" />
         <Technologie name="Asp.Net Core" src="/logo/dotnetcore.png" />
         <Technologie name=".Net" src="/logo/dotnet.png" />
@@ -104,6 +105,36 @@ export default function Home() {
             imageHeight: 340
           }
         ]} />
+      </div>
+
+      {/* < --- Education ---> */}
+      <div id="education" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Mes formations" />
+      </div>
+      <div className="pb-10 mx-96">
+        <EducationsGrid educations={[
+          {
+            name: "BTS SIO",
+            completeName: "Services Informatiques aux Organisations",
+            specialty: "Solutions logicielles et applications métiers",
+            school: "Lycée René Cassin",
+            location: "Strasbourg",
+            image: "/logo/lycee_rene_cassin.png",
+            imageWidth: 225,
+            imageHeight: 225,
+            date: "2021 - 2023"
+          }
+        ]} />
+      </div>
+
+      {/* < --- Contact ---> */}
+      <div id="contact" className="flex flex-wrap justify-center pb-10">
+        <SectionTitle title="Contact" />
+      </div>
+      <div className="flex flex-wrap justify-center pb-10 mx-96 gap-10">
+        <FancyButton name="GitHub" link="https://github.com/NathanMunsch" />
+        <FancyButton name="LinkedIn" link="https://www.linkedin.com/in/nathan-m-38204b220/" />
+        <FancyButton name="nathanmunschpro@gmail.com" link="mailto:nathanmunschpro@gmail.com" />
       </div>
     </main>
   );
