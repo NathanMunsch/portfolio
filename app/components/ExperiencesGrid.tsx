@@ -17,7 +17,7 @@ export default function ExperiencesGrid({ experiences }: { experiences: Experien
     return (
         <div className="grid grid-cols-3 gap-4">
             {experiences.map((experience, index) => (
-                <div className="bg-white rounded-lg shadow-xl">
+                <div key={index} className="bg-white rounded-lg shadow-xl">
                     <div className="h-40 flex items-center justify-center">
                         <Image src={experience.image} width={experience.imageWidth} height={experience.imageHeight} alt={experience.name} />
                     </div>
@@ -31,8 +31,8 @@ export default function ExperiencesGrid({ experiences }: { experiences: Experien
                             <div className="mt-4">
                                 <h4 className="text-lg font-bold">Détails</h4>
                                 <ul className="list-disc list-inside">
-                                    {experience.details.map((detail, index) => (
-                                        <li key={index}>{detail}</li>
+                                    {experience.details.map((detail, detailIndex) => (
+                                        <li key={detailIndex}>{detail}</li>
                                     ))}
                                 </ul>
                             </div>

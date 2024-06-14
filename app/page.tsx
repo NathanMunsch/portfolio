@@ -32,7 +32,7 @@ export default function Home() {
         <SectionTitle title="À propos" />
       </div>
       <div className="flex flex-row justify-center pb-10 mx-96 gap-4 items-center">
-        <p className="text-xl">Passionné par le développement informatique avec une expérience enrichie par l'alternance et les stages, je maîtrise divers langages et outils de programmation. En dehors de mon travail et de mes études, durant mon temps libre, je suis passionné par la moto et les jeux vidéo.</p>
+        <p className="text-xl">Passionné par le développement informatique avec une expérience enrichie par l&apos;alternance et les stages, je maîtrise divers langages et outils de programmation. En dehors de mon travail et de mes études, durant mon temps libre, je suis passionné par la moto et les jeux vidéo.</p>
         <Image className="rounded-lg" src="/logo/aboutme.png" width={150} height={150} alt="À propos de moi" />
       </div>
 
