@@ -14,7 +14,7 @@ interface Educations {
 
 export default function EducationsGrid ({ educations }: { educations: Educations[] }) {
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
             {educations.map((education, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-xl"> 
                     <div className="h-40 flex items-center justify-center">

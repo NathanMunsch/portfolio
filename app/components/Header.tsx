@@ -1,12 +1,12 @@
 export default function Header() {
     return (
-        <header className="flex justify-between items-center bg-white p-4 fixed w-full z-10">
+        <header className="flex justify-between items-center bg-slate-50 p-4 fixed w-full z-10">
             <h1 className="text-left text-4xl font-bold p-4">
                 NM
                 <span className="text-target text-2xl text-mainBlue">■</span>
             </h1>
             <nav className="container mx-auto p-4">
-                <ul className="flex justify-around">
+                <ul className="flex justify-around md:hidden lg:hidden">
                     <li><a href="#home" className="text-gray-700 hover:text-black hover:font-bold">Accueil</a></li>
                     <li><a href="#about" className="text-gray-700 hover:text-black hover:font-bold">À propos</a></li>
                     <li><a href="#skills" className="text-gray-700 hover:text-black hover:font-bold">Compétences</a></li>
