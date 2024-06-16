@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* < --- Title ---> */}
       <div id="home" className="flex h-screen flex-col items-center justify-center gap-3">
-        <h1 className="text-center text-8xl font-bold">
+        <h1 className="text-center text-8xl sm:text-7xl font-bold">
           Nathan Munsch
           <span className="text-target text-2xl text-mainBlue">■</span>
         </h1>
@@ -31,16 +31,16 @@ export default function Home() {
       <div id="about" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="À propos" />
       </div>
-      <div className="flex flex-row justify-center pb-10 mx-96 gap-4 items-center">
-        <p className="text-xl">Passionné par le développement informatique avec une expérience enrichie par l&apos;alternance et les stages, je maîtrise divers langages et outils de programmation. En dehors de mon travail et de mes études, durant mon temps libre, je suis passionné par la moto et les jeux vidéo.</p>
-        <Image className="rounded-lg" src="/logo/aboutme.png" width={150} height={150} alt="À propos de moi" />
+      <div className="flex flex-row justify-center pb-10 mx-96 md:mx-2 lg:mx-2 gap-4 xl:mx-32 items-center">
+        <p className="text-xl md:text-lg text-justify">Passionné par le développement informatique avec une expérience enrichie par l&apos;alternance et les stages, je maîtrise divers langages et outils de programmation. En dehors de mon travail et de mes études, durant mon temps libre, je suis passionné par la moto et les jeux vidéo.</p>
+        <Image className="rounded-lg md:hidden lg:hidden" src="/logo/aboutme.png" width={150} height={150} alt="À propos de moi" />
       </div>
 
       {/* < --- Skills ---> */}
       <div id="skills" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="Compétences" />
       </div>
-      <div className="flex flex-wrap justify-center gap-4 mx-96 pb-10">
+      <div className="flex flex-wrap justify-center gap-4 mx-96 md:mx-0 lg:mx-0 xl:mx-32 pb-10">
         <Technologie name="MySQL" src="/logo/mysql.svg" />
         <Technologie name="MariaDB" src="/logo/mariadb.png" />
         <Technologie name="SQL Server" src="/logo/sqlserver.svg" />
@@ -72,7 +72,7 @@ export default function Home() {
       <div id="projects" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="Mes projets" />
       </div>
-      <div className="pb-10 mx-96">
+      <div className="pb-10 mx-96 md:mx-2 lg:mx-2 xl:mx-32">
         <ProjectsGrid projects={[
           {
             name: "TwitterLite",
@@ -90,7 +90,7 @@ export default function Home() {
       <div id="experiences" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="Mes expériences" />
       </div>
-      <div className="pb-10 mx-96">
+      <div className="pb-10 mx-96 md:mx-2 lg:mx-2 xl:mx-32">
         <ExperiencesGrid experiences={[
           {
             name: "Schiller Médical",
@@ -111,7 +111,7 @@ export default function Home() {
       <div id="education" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="Mes formations" />
       </div>
-      <div className="pb-10 mx-96">
+      <div className="pb-10 mx-96 md:mx-2 lg:mx-2 xl:mx-32">
         <EducationsGrid educations={[
           {
             name: "BTS SIO",
@@ -120,8 +120,8 @@ export default function Home() {
             school: "Lycée René Cassin",
             location: "Strasbourg",
             image: "/logo/lycee_rene_cassin.png",
-            imageWidth: 225,
-            imageHeight: 225,
+            imageWidth: 200,
+            imageHeight: 200,
             date: "2021 - 2023"
           }
         ]} />
@@ -131,7 +131,7 @@ export default function Home() {
       <div id="contact" className="flex flex-wrap justify-center pb-10">
         <SectionTitle title="Contact" />
       </div>
-      <div className="flex flex-wrap justify-center pb-10 mx-96 gap-10">
+      <div className="flex flex-wrap justify-center pb-10 mx-96 md:mx-2 xl:mx-32 gap-10">
         <FancyButton name="GitHub" link="https://github.com/NathanMunsch" />
         <FancyButton name="LinkedIn" link="https://www.linkedin.com/in/nathan-m-38204b220/" />
         <FancyButton name="nathanmunschpro@gmail.com" link="mailto:nathanmunschpro@gmail.com" />

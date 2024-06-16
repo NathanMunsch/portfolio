@@ -12,7 +12,7 @@ interface Project {
 
 export default function ProjectsGrid({ projects }: { projects: Project[] }) {
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
             {projects.map((project, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-xl">
                     <div className="h-40 flex items-center justify-center">
